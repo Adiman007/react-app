@@ -1,0 +1,36 @@
+.welcome-banner {
+    background-color: #3F51B5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .welcome-banner-title {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+  
+  .welcome-banner-text {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .welcome-banner-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: #000;
+    text-decoration: none;
+  }
+  
+  .welcome-banner-link:hover {
+    color: #007bff;
+  }
+  
+  .welcome-banner-link img {
+    width: 24px;
+    height: 24px;
+    margin-left: 0.5rem;
+  }

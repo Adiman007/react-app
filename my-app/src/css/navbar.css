@@ -1,0 +1,43 @@
+nav {
+    background-color: #3F51B5;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  li {
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  li:hover {
+    background-color: #2c3e50;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 80px;
+
+  }
