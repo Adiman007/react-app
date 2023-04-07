@@ -1,41 +1,26 @@
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Layout from './page/Layout';
+import TeamPage from './page/TeamPage';
+import RandomPage from './page/RandomPage';
+import SearchPage from './page/SearchPage';
+import NotFoundPage from './page/NotFoundPage';
+import HomePage from './page/HomePage';
+import './css/App.css';
 
-import React, { Component } from 'react';
-import PokemonDisplay from './PokemonDisplay';
-
-
-class App extends Component {
-  render() {
-
+function App() {
     return (
-      <div className="App">
-        <table>
-          <tr>
-            <td>
-              <PokemonDisplay />
-            </td>
-            <td>
-              <PokemonDisplay />
-            </td>
-            <td>
-              <PokemonDisplay />
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <PokemonDisplay />
-            </td>
-            <td>
-              <PokemonDisplay />
-            </td>
-            <td>
-              <PokemonDisplay name="pikachu"/>
-            </td>
-          </tr>
-        </table>
-      </div>
+    <BrowserRouter>
+       <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/random" element={<RandomPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
     );
-  }
-}
-
+  };
 export default App;
