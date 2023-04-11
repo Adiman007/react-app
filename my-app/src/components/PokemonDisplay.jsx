@@ -10,7 +10,7 @@ const PokemonDisplay = ({name}) => {
   useEffect(() => {
     const fetchData = async () => {
         
-        const randPokemon = Math.floor(Math.random() * 898) + 1;
+        const randPokemon = Math.floor(Math.random() * 1278) + 1;
         const rand = name ? name : randPokemon;
         const result = await axios(
         `https://pokeapi.co/api/v2/pokemon/${rand}`
@@ -63,7 +63,7 @@ const PokemonDisplay = ({name}) => {
     <div className="PokemonDisplay" style={{ background: getGradientColors() }}>
       {pokemon && (
         <>
-          <h2 className="pokemon-name">{pokemonName}</h2>
+          <h2 className="pokemon-name">{pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</h2>
           <img
             className="pokemon-image"
             src={pokemon.sprites.front_default}
