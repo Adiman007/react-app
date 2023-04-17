@@ -13,25 +13,25 @@ function Navbar() {
       <ul>
         <li>
           <Link to="/home">
-          <HomeIcon class="icon"/>
+          <HomeIcon className="icon"/>
           Home
           </Link>
         </li>
         <li>
           <Link to="/team">
-          <TeamIcon class="icon"/>
+          <TeamIcon className="icon"/>
           Team
           </Link>
         </li>
         <li>
           <Link to="/random">
-          <RandomIcon class="icon"/>
+          <RandomIcon className="icon"/>
           Random
           </Link>
         </li>
         <li>
           <Link to="/search">
-          <SearchIcon class="icon"/>
+          <SearchIcon className="icon"/>
           Search
           </Link>
         </li>

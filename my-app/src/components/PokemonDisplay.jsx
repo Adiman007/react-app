@@ -6,11 +6,12 @@ const PokemonDisplay = ({name}) => {
   const [pokemon, setPokemon] = useState(null);
   const [pokemonName, setPokemonName] = useState(null);
   const [types, setTypes] = useState([]);
+  const [bool, setBool] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
         
-        const randPokemon = Math.floor(Math.random() * 1278) + 1;
+        const randPokemon = Math.floor(Math.random() * 1010) + 1;
         const rand = name ? name : randPokemon;
         const result = await axios(
         `https://pokeapi.co/api/v2/pokemon/${rand}`
@@ -21,6 +22,14 @@ const PokemonDisplay = ({name}) => {
     };
     fetchData();
   }, [name]);
+
+  const handleMouseOver = () => {
+    setBool(true);
+  };
+
+  const handleMouseOut = () => {
+    setBool(false);
+  };
 
   const getGradientColors = () => {
     if (!types.length) {
@@ -59,16 +68,29 @@ const PokemonDisplay = ({name}) => {
     return imgName;
   };
 
+  const imgDisplay = () => {
+    if (bool) {
+      return <img
+        className="pokemon-image"
+        src={pokemon.sprites.front_shiny}
+        alt="pokemon"
+      />
+    } else {
+      return <img
+        className="pokemon-image"
+        src={pokemon.sprites.front_default}
+        alt="pokemon"
+      />
+    }
+  }
+  const getDisplayContent = () => {
   return (
     <div className="PokemonDisplay" style={{ background: getGradientColors() }}>
       {pokemon && (
         <>
           <h2 className="pokemon-name">{pokemonName.charAt(0).toUpperCase() + pokemonName.slice(1)}</h2>
-          <img
-            className="pokemon-image"
-            src={pokemon.sprites.front_default}
-            alt="pokemon"
-          />
+          {imgDisplay()}
+          
           <ul className="pokemon-types">
             {types.map((type) => (
               <div key={type} className="pokemon-type">
@@ -87,6 +109,15 @@ const PokemonDisplay = ({name}) => {
       )}
     </div>
   );
+};
+return (
+  <div
+    onMouseOver={handleMouseOver}
+    onMouseOut={handleMouseOut}
+  >
+    {getDisplayContent()}
+  </div>
+);
 };
 
 export default PokemonDisplay;
