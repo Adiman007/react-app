@@ -69,7 +69,7 @@ const PokemonDisplay = ({name}) => {
   };
 
   const imgDisplay = () => {
-    if (bool) {
+    if (bool && pokemon.sprites.front_shiny){
       return <img
         className="pokemon-image"
         src={pokemon.sprites.front_shiny}
