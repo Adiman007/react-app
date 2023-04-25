@@ -4,7 +4,7 @@ import "../css/welcome.css"
 function Hello() {
   return (
     <div className="welcome-banner">
-      <div>
+      <>
       <h1 className="welcome-banner-title">Welcome to my app</h1>
       
       <p className="welcome-banner-text">
@@ -13,7 +13,7 @@ function Hello() {
       <p className="welcome-banner-text">
         Click on the links above to navigate the site
       </p>
-      </div>
+      </>
       <p className="welcome-banner-text">
         You can see my other projects on{" "}
         <a

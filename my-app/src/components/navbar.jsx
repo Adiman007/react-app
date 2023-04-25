@@ -6,6 +6,7 @@ import { ReactComponent as HomeIcon } from "../assets/house.svg";
 import { ReactComponent as RandomIcon } from "../assets/egg.svg";
 import { ReactComponent as TeamIcon } from "../assets/pokeball.svg";
 import { ReactComponent as SearchIcon } from "../assets/magnifying.svg";
+import { ReactComponent as PokedleIcon } from "../assets/gameboy.svg";
 
 function Navbar() {
   return (
@@ -33,6 +34,12 @@ function Navbar() {
           <Link to="/search">
           <SearchIcon className="icon"/>
           Search
+          </Link>
+        </li>
+        <li>
+          <Link to="/pokedle">
+          <PokedleIcon className="icon"/>
+          Pokedle
           </Link>
         </li>
       </ul>

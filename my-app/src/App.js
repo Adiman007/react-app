@@ -6,6 +6,7 @@ import RandomPage from './page/RandomPage';
 import SearchPage from './page/SearchPage';
 import NotFoundPage from './page/NotFoundPage';
 import HomePage from './page/HomePage';
+import Pokedle from './page/Pokedle';
 import './css/App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/team" element={<TeamPage />} />
           <Route path="/random" element={<RandomPage />} />
           <Route path="/search" element={<SearchPage />} />
+          <Route path="/pokedle" element={<Pokedle />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

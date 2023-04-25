@@ -9,6 +9,7 @@ class Team extends Component {
     return (
       <div className="Team">
         <table>
+          <tbody>
           <tr>
             <td>
               <PokemonDisplay />
@@ -31,6 +32,7 @@ class Team extends Component {
               <PokemonDisplay/>
             </td>
           </tr>
+          </tbody>
         </table>
       </div>
     );

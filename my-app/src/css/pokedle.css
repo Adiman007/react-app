@@ -1,0 +1,44 @@
+ .categories{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+    font-size: 18px;
+}
+.categories p{
+    width: 140px;
+    padding-right: 5px;
+    padding-left: 4px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color:beige
+}
+.categories p:hover{
+    cursor: grab;
+}
+.categories p:first-child{
+    padding-left: 350px;
+}
+.Title{
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Arial, sans-serif; 
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color:beige
+}
+
+.pokemon pokemon-button{
+    margin-top: 10px;
+}
+.tableGuess{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
